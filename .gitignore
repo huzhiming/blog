@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# weex build
+.temp
+
+# weex generate
+dist
+
+# History
+.history
+.vscode
+.DS_Store
+密码备忘录.md
