@@ -51,6 +51,31 @@ s2i,err:=strconv.Atoi(i2s)
 ```
 
 ```go
+// 数组
+array:=[5]string{"a","b","c","d","e"}
+for i,v:=range array{
+    fmt.Printf("数组索引:%d,对应值:%s\n", i, v)
+}
+// 基于数组生成切片
+slice:=array[2:5] // [c,d,e] 包含头 不包含尾
+
+// 切片声明
+slice1:=make([]string,4,8)
+slice1:=[]string{"a","b","c","d","e"} // 字面量
+fmt.Println(len(slice1),cap(slice1))
+// 切片修改
+slice[1] ="f"
+
+
+// map 字面量申明
+nameAgeMap:=map[string]int{"飞雪无情":20}
+// map 赋值
+nameAgeMap["飞雪无情"] = 20
+// Map 获取和删除
+//添加键值对或者更新对应 Key 的 Value
+nameAgeMap["飞雪无情"] = 20
+//获取指定 Key 对应的 Value
+age:=nameAgeMap["飞雪无情"]
 
 ```
 

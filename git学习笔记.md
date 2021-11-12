@@ -148,3 +148,4 @@ git log --graph --oneline --decorate $( git fsck --no-reflog | awk '/dangling co
 可以看到一个明显的操作记录，按照时间顺序，找到记录 git stash apply 「记录ID」即可
 ```
 
+![img](https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fwww.pianshen.com%2Fimages%2F559%2F7508430e3973832d48a875fc44828c67.png&refer=http%3A%2F%2Fwww.pianshen.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1637285747&t=d44ae3bec6ef6ff6b47bfb83690cd3fd)
