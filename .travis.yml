@@ -1,2 +1,0 @@
-language: node
-script: npm run test
