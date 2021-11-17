@@ -59,23 +59,21 @@ for i,v:=range array{
 // 基于数组生成切片
 slice:=array[2:5] // [c,d,e] 包含头 不包含尾
 
-// 切片声明
-slice1:=make([]string,4,8)
+// 切片
+slice1:=make([]string,4,8) //声明切片，4表长度、8表容量 
 slice1:=[]string{"a","b","c","d","e"} // 字面量
 fmt.Println(len(slice1),cap(slice1))
-// 切片修改
-slice[1] ="f"
+slice[1] ="f" // 修改
 
-
-// map 字面量申明
-nameAgeMap:=map[string]int{"飞雪无情":20}
-// map 赋值
-nameAgeMap["飞雪无情"] = 20
-// Map 获取和删除
-//添加键值对或者更新对应 Key 的 Value
-nameAgeMap["飞雪无情"] = 20
-//获取指定 Key 对应的 Value
-age:=nameAgeMap["飞雪无情"]
+// map 
+nameAgeMap:=map[string]int{"飞雪无情":20} // 字面量申明
+nameAgeMap["飞雪无情"] = 20 // map 赋值
+age:=nameAgeMap["飞雪无情"] //获取指定 Key 对应的 Value
+delete(nameAgeMap,"飞雪无情") // 删除key
+for k,v:=range nameAgeMap{
+    fmt.Println("Key is",k,",Value is",v)
+}
+len(nameAgeMap) // 获取大小（键值对的个数）
 
 ```
 

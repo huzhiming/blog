@@ -1,0 +1,80 @@
+Usage:	docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Options:
+      --config string      Location of client config files (default "/Users/zhiming/.docker") 客户端配置文件的位置（默认为“ /Users/zhiming/.docker”）
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and
+                           default context set with "docker context use") 用于连接到守护程序的上下文的名称（覆盖DOCKER_HOST env var和默认上下文设置为“ docker context use”）
+  -D, --debug              Enable debug mode 启用调试模式
+  -H, --host list          Daemon socket(s) to connect to 要连接的守护程序套接字
+  -l, --log-level string   Set the logging level ("debug"|"info"|"warn"|"error"|"fatal") (default "info") 设置日志记录级别（“调试” |“信息” |“警告” |“错误” |“致命”）（默认为“信息”）
+      --tls                Use TLS; implied by --tlsverify 使用TLS; --tlsverify暗示
+      --tlscacert string   Trust certs signed only by this CA (default "/Users/zhiming/.docker/ca.pem") 仅由该CA签名的信任证书（默认为“ /Users/zhiming/.docker/ca.pem”）
+      --tlscert string     Path to TLS certificate file (default "/Users/zhiming/.docker/cert.pem") TLS证书文件的路径（默认为“ /Users/zhiming/.docker/cert.pem”）
+      --tlskey string      Path to TLS key file (default "/Users/zhiming/.docker/key.pem") TLS密钥文件的路径（默认为“ /Users/zhiming/.docker/key.pem”）
+      --tlsverify          Use TLS and verify the remote 使用TLS并验证远程
+  -v, --version            Print version information and quit 打印版本信息并退出
+
+Management Commands: 管理命令：
+  builder     Manage builds 管理构建
+  checkpoint  Manage checkpoints 管理检查点
+  config      Manage Docker configs 管理docker配置
+  container   Manage containers 管理容器
+  context     Manage contexts 管理上下文
+  image       Manage images 管理镜像
+  network     Manage networks 管理网络
+  node        Manage Swarm nodes 管理群节点
+  plugin      Manage plugins 管理插件
+  secret      Manage Docker secrets Docker机密
+  service     Manage services 管理服务
+  stack       Manage Docker stacks 管理Docker堆栈
+  swarm       Manage Swarm 管理群
+  system      Manage Docker 管理docker
+  trust       Manage trust on Docker images 管理对Docker映像的信任
+  volume      Manage volumes 管理宗卷
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container 将本地标准输入，输出和错误流附加到正在运行的容器
+  build       Build an image from a Dockerfile 构建一个映像从Dockerfile
+  commit      Create a new image from a container's changes 根据容器的更改创建新镜像
+  cp          Copy files/folders between a container and the local filesystem 在容器和本地文件系统之间复制文件/文件夹
+  create      Create a new container 创建一个容器
+  deploy      Deploy a new stack or update an existing stack 部署新栈或更新现有堆栈
+  diff        Inspect changes to files or directories on a container's filesystem 检查容器文件系统上文件或目录的更改
+  events      Get real time events from the server 从服务器获取实时事件
+  exec        Run a command in a running container 在正在运行的容器中运行命令
+  export      Export a container's filesystem as a tar archive 将容器的文件系统导出为tar存档
+  history     Show the history of an image 显示镜像的历史记录
+  images      List images 镜像列表
+  import      Import the contents from a tarball to create a filesystem image 从tarball导入内容以创建文件系统映像
+  info        Display system-wide information 显示系统范围的信息
+  inspect     Return low-level information on Docker objects 返回有关Docker对象的低级信息
+  kill        Kill one or more running containers 杀死一个或多个正在运行的容器
+  load        Load an image from a tar archive or STDIN 从tar存档或STDIN加载镜像
+  login       Log in to a Docker registry 登录Docker注册表
+  logout      Log out from a Docker registry 从Docker注册表注销
+  logs        Fetch the logs of a container 提取容器的日志
+  pause       Pause all processes within one or more containers 暂停一个或多个容器中的所有进程
+  port        List port mappings or a specific mapping for the container 列出端口映射或容器的特定映射
+  ps          List containers 容器列表
+  pull        Pull an image or a repository from a registry 拉取一个镜像或仓库从镜像仓库
+  push        Push an image or a repository to a registry 推送一个镜像或仓库到镜像仓库
+  rename      Rename a container 重命名容器
+  restart     Restart one or more containers 重启一个或多个容器
+  rm          Remove one or more containers 移除一个或多个容器
+  rmi         Remove one or more images 移除一个容器
+  run         Run a command in a new container 运行一个命令在新容器
+  save        Save one or more images to a tar archive (streamed to STDOUT by default) 保存一个或多个镜像到tar存档（默认情况下流式传输到STDOUT）
+  search      Search the Docker Hub for images 在Docker Hub中搜索镜像
+  start       Start one or more stopped containers 启动一个或多个已停止的容器
+  stats       Display a live stream of container(s) resource usage statistics 显示容器资源使用统计信息的实时流
+  stop        Stop one or more running containers 停止一个或多个正在运行的容器
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE 创建引用了SOURCE_IMAGE的标签TARGET_IMAGE
+  top         Display the running processes of a container 显示容器的运行进程
+  unpause     Unpause all processes within one or more containers 取消暂停一个或多个容器中的所有进程
+  update      Update configuration of one or more containers 更新一个或多个容器的配置
+  version     Show the Docker version information 显示Docker版本信息
+  wait        Block until one or more containers stop, then print their exit codes 阻塞直到一个或多个容器停止，然后打印其退出代码
+
+Run 'docker COMMAND --help' for more information on a command. 运行“ docker COMMAND --help”以获取有关命令的更多信息。
