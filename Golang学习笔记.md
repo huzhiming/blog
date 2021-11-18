@@ -75,5 +75,54 @@ for k,v:=range nameAgeMap{
 }
 len(nameAgeMap) // 获取大小（键值对的个数）
 
+// 函数
+func main(params) result { body } //函数签名
+func sum(a int,b int) int{ // 实现
+    return a+b
+}
+func sum(a, b int) (int,err){ //多值返回
+    if a<0 || b<0 {
+        return 0,errors.New("a或者b不能是负数")
+    }
+    return a + b,nil
+}
+res,err:=sum(-1,2)
+res,_:=sum(-1,2) // _忽略
+
+func sum2(a, b int) (sum int,err error){ // 命名返回参数
+    if a<0 || b<0 {
+        return 0,errors.New("a或者b不能是负数")
+    }
+    sum=a+b
+    err=nil
+    return 
+}
+func sum3(params ...int) int { // 可变参数params 类型为切片
+	sum := 0
+	for _, i := range params {
+		sum += i
+	}
+	return sum
+}
+
+//同一个包中的函数哪怕是私有的（函数名称首字母小写）也可以被调用。如果不同包的函数要被调用，那么函数的作用域必须是公有的，也就是函数名称的首字母要大写，比如 Println。
+函数名称首字母小写代表私有函数，只有在同一个包中才可以被调用；
+函数名称首字母大写代表公有函数，不同的包也可以调用；
+任何一个函数都会从属于一个包。
+
+
+// 匿名函数和闭包
+func main() {
+    aa:=100;
+    sum2 := func(a, b int) int {
+        return a + b + aa // 访问外层变量
+    }
+    fmt.Println(sum2(1, 2)) // 103
+}
+
 ```
+
+###### 不同于函数的方法
+
+> 在 Go 语言中，方法和函数是两个概念，但又非常相似，不同点在于方法必须要有一个接收者，这个接收者是一个类型，这样方法就和这个类型绑定在一起，称为这个类型的方法。
 
