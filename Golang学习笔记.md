@@ -1,3 +1,41 @@
+###### 常见问题
+
+**vscode 安装go环境无法安装gopls等插件，响应超时、失去连接等问题的简单解决方案**
+
+https://blog.csdn.net/zhouqi1427/article/details/119687277
+
+看错误提示就大概明白，是国内无法连接到 golang.org
+尝试下载了镜像网站 github.com/golang 里面的 tools 也不靠谱
+因为安装时总会缺少非常多的插件，导致无法简单地执行
+go install golang.org/x/tools/gopls
+
+最终解决方案是修改代理，然后在 cmd 下面输入：
+
+```bash
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.cn,direct
+```
+
+修改代理到国内的go，然后在 cmd 重新获取即可成功：
+
+```
+go get -v golang.org/x/tools/gopls
+```
+
+此时，顺便可以将 vocode 的其他必要插件都安装一下，因为改了代理所以可以非常顺利地完成安装。
+
+最后需要关掉 GO111MODULE，否则运行任何代码都会提示缺 main.go：
+
+```
+go env -w GO111MODULE=off
+```
+
+https://goproxy.io/zh/ 国内镜像
+
+
+
+
+
 ```zsh
 环境变量
 export GOPATH=/Users/项目根目录
@@ -125,4 +163,6 @@ func main() {
 ###### 不同于函数的方法
 
 > 在 Go 语言中，方法和函数是两个概念，但又非常相似，不同点在于方法必须要有一个接收者，这个接收者是一个类型，这样方法就和这个类型绑定在一起，称为这个类型的方法。
+
+
 

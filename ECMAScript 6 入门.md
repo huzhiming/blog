@@ -592,7 +592,6 @@ var difference = new Set([...a].filter(x => !b.has(x)));
 
 WeakSet 的成员只能是对象；WeakSet 不可遍历；（WeakMap 结构同样适用）
 
-
 WeakSet 的用法1：是储存 DOM 节点，而不用担心这些节点从文档移除时，会引发内存泄漏
 WeakSet 的用法2：保证了`Foo`的实例方法，只能在`Foo`的实例上调用
 
@@ -610,7 +609,28 @@ class Foo {
 }
 ```
 
+#### Proxy
 
+
+
+#### Reflect
+
+将`Object`对象的一些明显属于语言内部的方法，放到`Reflect`对象上
+
+修改某些`Object`方法的返回结果，让其变得更合理
+
+`Reflect` 让`Object`操作都变成函数行为
+
+`Reflect`对象的方法与`Proxy`对象的方法一一对应，只要是`Proxy`对象的方法，就能在`Reflect`对象上找到对应的方法
+
+
+
+日常用法，改善编程风格
+
+```
+Reflect.has(obj, name) === name in obj
+Reflect.deleteProperty(obj, name) === delete obj[name]
+```
 
 
 
